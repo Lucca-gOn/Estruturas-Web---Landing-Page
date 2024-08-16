@@ -37,10 +37,36 @@
         <div class="layout-grid main-home-flex">
             <div class="text-home">
                 <h1 class="title-viagem">As melhores hospedagens do Brasil</h1>
-                <p class="text-viagem">Mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal, e realizar a viagem dos seus sonhos.</p>
+                <p class="text-viagem">Mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal, e
+                    realizar a viagem dos seus sonhos.</p>
             </div>
             <img class="map-image" src="./assets/images/mapa-brasil.png" alt="">
-        </div>    
+        </div>
+        <div class="positioned-box positioned-box-flex">
+            <div class="icon-box">
+                <img src="./assets/icons/local-icon.svg" alt="">
+                <input type="text" id="location-input" placeholder="Qual o local desejado?">
+            </div>
+            <div class="icon-box">
+                <img src="./assets/icons/checkin-icon.svg" alt="">
+                <input type="text" id="check-in-text" placeholder="Data check-in"
+                    onmouseover="transformToDateInput('check-in-text', 'check-in')"
+                    onmouseout="transformToTextInput('check-in-text', 'check-in')">
+                <input type="date" id="check-in" style="display:none;" onchange="updateCheckInDateText()"
+                    onmouseout="transformToTextInput('check-in-text', 'check-in')">
+            </div>
+            <div class="icon-box">
+                <img src="./assets/icons/checkout-icon.svg" alt="">
+                <input type="text" id="check-out-text" placeholder="Data check-out"
+                    onmouseover="transformToDateInput('check-out-text', 'check-out')"
+                    onmouseout="transformToTextInput('check-out-text', 'check-out')">
+                <input type="date" id="check-out" style="display:none;" onchange="updateCheckOutDateText()"
+                    onmouseout="transformToTextInput('check-out-text', 'check-out')">
+            </div>
+            <button>Procurar hotel</button>
+
+
+        </div>
         </div>
     </main>
 
@@ -49,9 +75,32 @@
     </footer>
 
     <script>
-        function mostrarMenu() {
-            document.getElementById("navmenu").classList.toggle("mostrarMenu")
+        function transformToDateInput(textInputId, dateInputId) {
+            var textInput = document.getElementById(textInputId);
+            var dateInput = document.getElementById(dateInputId);
+
+            // Replace text input with date input
+            textInput.style.display = 'none';
+            dateInput.style.display = 'block';
+            dateInput.focus();
         }
+
+        function updateCheckInDateText() {
+            const date = new Date(document.getElementById('check-in').value);
+            document.getElementById('check-in-text').value = date.toLocaleDateString('pt-BR');
+            document.getElementById('check-in-text').style.display = 'block';
+            document.getElementById('check-in').style.display = 'none';
+        }
+
+        function updateCheckOutDateText() {
+            const date = new Date(document.getElementById('check-out').value);
+            document.getElementById('check-out-text').value = date.toLocaleDateString('pt-BR');
+            document.getElementById('check-out-text').style.display = 'block';
+            document.getElementById('check-out').style.display = 'none';
+        }
+
+
+
     </script>
 
 </body>

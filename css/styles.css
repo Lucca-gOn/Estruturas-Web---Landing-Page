@@ -137,3 +137,59 @@ main .map-image{
     margin-top: 46px;
 }
 
+main .positioned-box {
+    position: absolute;
+    bottom: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 942px; 
+    height: 80px; 
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000; 
+}
+
+main .positioned-box-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 107px;
+}
+
+main .icon-box{
+    display: flex;
+    align-items: center;
+
+    width: 113px;
+
+    gap: 8px;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+input[type="date"] {
+    border: none;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}

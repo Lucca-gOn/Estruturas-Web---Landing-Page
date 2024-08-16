@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkar o CSS com o HTML -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Hospedagens</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="layout-grid header-flex">
+            <div class="logo-white">
+                <img src="./assets/images/logo-branca.png" alt="">
+            </div>
+            <!--Links do Header  -->
+            <nav id="navmenu">
+                <a href="">Hotéis</a>
+                <a href="">Contato</a>
+                <a href="">Entrar</a>
+                <div class="register">
+                    <a href="">Cadastrar-se</a>
+                </div>
+
+            </nav>
+            <img src="./assets/Icons/menu_open_FILL0_wght400_GRAD0_opsz48.svg" id="menu-smartphone"
+                alt="abre o menu lateral do smartphone" onclick="mostrarMenu()">
+
+        </div>
+    </header>
+
+    <main>
+        <div class="layout-grid main-home-flex">
+            <div class="text-home">
+                <h1 class="title-viagem">As melhores hospedagens do Brasil</h1>
+                <p class="text-viagem">Mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal, e realizar a viagem dos seus sonhos.</p>
+            </div>
+            <img class="map-image" src="./assets/images/mapa-brasil.png" alt="">
+        </div>    
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function mostrarMenu() {
+            document.getElementById("navmenu").classList.toggle("mostrarMenu")
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+    --black: #4E4B59;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--black);
+
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(95.24deg, #1E52B4 -10.53%, #002777 103.54%);
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-text {
+    font-size: 1.1rem;
+}
+
+.text-light {
+    color: white;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    height: 5rem;
+}
+
+.brand-logo {
+    height: 23px;
+    width: 156px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 12px 40px;
+    margin: 0;
+    height: 50px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    background: #009C3B;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+}
+
+.btn-light:hover {
+    color: var(--black);
+    background-color: white;
+}
+
+.btn-light {
+    background-color: transparent;
+}
+
+.banner-image {
+    width: 30%;
+}
+
+.promotion-image {
+    width: 33%;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+}
+
+h1 {
+    padding: 1rem 0px;
+    width: 60%;
+}
+
+.promotion-title {
+    font-weight: 900;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+.text-green {
+    color: #009C3B;
+}
+
+.text-yellow {
+    color: #FFDF00;
+}
+
+.text-blue {
+    color: #002777;
+}
+
+.paragraph {
+    line-height: 2.3rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 50%;
+}
+
+.paragraph-bold {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+main {
+    width: 100%;
+    background-color: white;
+}
+
+.filters {
+    position: absolute;
+    width: 80%;
+    top: -45px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.filter-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.filter-group div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 22.5%;
+    height: 60px;
+    border-right: 2px dashed #4E4B59;
+}
+
+.filter-group div a {
+    font-size: 1.1rem;
+}
+
+.filters div img {
+    width: 1rem;
+    height: auto;
+}
+
+.promotion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion span {
+    gap: 30px;
+}
+
+footer {
+    background: linear-gradient(90deg, #009C3B 0%, #009538 100%);
+    width: 100%;
+    height: 30%;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: -2rem;
+    padding: 2rem 0px;
+    color: white;
+    width: 100%;
+}
+
+.footer-main * {
+    padding: 0.75rem 0px;
+    text-align: center;
+}
+
+.footer-main * * {
+    padding: 0.75rem 0px;
+    text-align: center;
+}
+
+.footer-end {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: #FFDF00;
+    padding: 1rem;
+}
+
+.hotels {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.hotel-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.hotel-card {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 300px;
+    padding: 1rem;
+}
+
+.hotel-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hotel-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+
+    h1 {
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-text {
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        height: 450px;
+    }
+
+    .banner-image {
+        display: none;
+    }
+
+    .filter-group div {
+        display: none;
+    }
+
+    .banner-content>span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15%;
+        gap: 5%;
+        height: 100%;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .promotion {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hotels {
+        margin-top: 0px;
+        grid-template-columns: 100%;
+    }
+
+    .promotion-title {
+        line-height: 3rem;
+    }
+
+    .promotion-image {
+        display: none;
+    }
+
+}

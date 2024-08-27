@@ -3,106 +3,215 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Linkar o CSS com o HTML -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Hospedagens</title>
+    <title>Hospedagens.com</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="layout-grid header-flex">
-            <div class="logo-white">
-                <img src="./assets/images/logo-branca.png" alt="">
+    <header class="banner container">
+
+        <nav class="nav flex-center">
+
+            <img src="./assets/images/logo-branca.png" alt="" class="brand-logo">
+
+            <div class="nav-links flex-center">
+
+                <a class="nav-text text-light" href=".">Hotéis</a>
+                <a class="nav-text text-light" href=".">Contato</a>
+                <a class="nav-text text-light" href=".">Entrar</a>
+
+                <button type="submit" class="btn flex-center btn-light">Cadastrar-se</button>
+
             </div>
-            <!--Links do Header  -->
-            <nav id="navmenu">
-                <a href="">Hotéis</a>
-                <a href="">Contato</a>
-                <a href="">Entrar</a>
-                <div class="register">
-                    <a href="">Cadastrar-se</a>
-                </div>
-
-            </nav>
-            <img src="./assets/Icons/menu_open_FILL0_wght400_GRAD0_opsz48.svg" id="menu-smartphone"
-                alt="abre o menu lateral do smartphone" onclick="mostrarMenu()">
-
+        </nav>
+        <div class="banner-content">
+            <span>
+                <h1 class="text-light">
+                    As melhores hospedagens do Brasil
+                </h1>
+                <p class="nav-text text-light paragraph">
+                    mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal, e realizar a
+                    viagem dos seus sonhos
+                </p>
+            </span>
+            <img src="./assets/images/mapa-brasil.png" alt="" class="banner-image">
         </div>
+
+
     </header>
-
     <main>
-        <div class="layout-grid main-home-flex">
-            <div class="text-home">
-                <h1 class="title-viagem">As melhores hospedagens do Brasil</h1>
-                <p class="text-viagem">Mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal, e
-                    realizar a viagem dos seus sonhos.</p>
-            </div>
-            <img class="map-image" src="./assets/images/mapa-brasil.png" alt="">
-        </div>
-        <div class="positioned-box positioned-box-flex">
-            <div class="icon-box">
-                <img src="./assets/icons/local-icon.svg" alt="">
-                <input type="text" id="location-input" placeholder="Qual o local desejado?">
-            </div>
-            <div class="icon-box">
-                <img src="./assets/icons/checkin-icon.svg" alt="">
-                <input type="text" id="check-in-text" placeholder="Data check-in"
-                    onmouseover="transformToDateInput('check-in-text', 'check-in')"
-                    onmouseout="transformToTextInput('check-in-text', 'check-in')">
-                <input type="date" id="check-in" style="display:none;" onchange="updateCheckInDateText()"
-                    onmouseout="transformToTextInput('check-in-text', 'check-in')">
-            </div>
-            <div class="icon-box">
-                <img src="./assets/icons/checkout-icon.svg" alt="">
-                <input type="text" id="check-out-text" placeholder="Data check-out"
-                    onmouseover="transformToDateInput('check-out-text', 'check-out')"
-                    onmouseout="transformToTextInput('check-out-text', 'check-out')">
-                <input type="date" id="check-out" style="display:none;" onchange="updateCheckOutDateText()"
-                    onmouseout="transformToTextInput('check-out-text', 'check-out')">
-            </div>
-            <button>Procurar hotel</button>
+        <div class="container">
 
 
-        </div>
+            <nav class="filters">
+                <div class="filter-group">
+
+
+                    <div>
+                        <img src="./assets/icons/local-icon.png" alt="">
+                        <a>Qual o local desejado?</a>
+                    </div>
+                    <div>
+                        <img src="./assets/icons/checkin-icon.svg" alt="">
+                        <a>Data check in</a>
+                    </div>
+                    <div>
+                        <img src="./assets/icons/checkout-icon.svg" alt="">
+                        <a>Data check out</a>
+                    </div>
+
+                    <button class="btn flex-center">Procurar Hotel</button>
+                </div>
+            </nav>
+            <section class="hotels">
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="hotel-card">
+                    <figure class="hotel-info">
+                        <img src="" alt="" class="hotel-image">
+                        <figcaption class="hotel-details">
+                            <span class="hotel-header">
+                                <h3>Title</h3>
+                                <h3 class="text-yellow">RJ</h3>
+                            </span>
+                            <label for="" class="hotel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                ac dictum lacus. Nullam dignissim orci.</label>
+                        </figcaption>
+                    </figure>
+                </article>
+                
+            </section>
+
+
+
+            <section class="promotion banner-content">
+                <span>
+                    <h1 class="promotion-title">
+                        Venha conferir os melhores<span class="text-blue"> hoteis</span> com as melhores
+                        <span class="text-green"> promoções </span> do país
+                    </h1>
+                    <p class="nav-text paragraph paragraph-bold">
+                        <span class="text-green">Não perca tempo </span>e venha conferir o que há de <span
+                            class="text-yellow">melhor</span> na hotelagem brasileira
+                    </p>
+                </span>
+                <img src="assets/images/travel.png" alt="" class="promotion-image">
+            </section>
+
+
         </div>
     </main>
 
     <footer>
+        <div class="container footer-main">
+            <h2>
+                Fale com um de nossos acessores
+            </h2>
+            <span class="footer-contacts">
+                <p class="nav-text">
+                    hospedagens@contato.com.br
+                </p>
+                <p class="nav-text">
+                    (11) 0800-707-0707
+                </p>
+            </span>
+        </div>
 
+        <div class="footer-end">
+            <img src="./assets/images/logo-preta.png" alt="" class="brand-logo-dark">
+        </div>
     </footer>
-
-    <script>
-        function transformToDateInput(textInputId, dateInputId) {
-            var textInput = document.getElementById(textInputId);
-            var dateInput = document.getElementById(dateInputId);
-
-            // Replace text input with date input
-            textInput.style.display = 'none';
-            dateInput.style.display = 'block';
-            dateInput.focus();
-        }
-
-        function updateCheckInDateText() {
-            const date = new Date(document.getElementById('check-in').value);
-            document.getElementById('check-in-text').value = date.toLocaleDateString('pt-BR');
-            document.getElementById('check-in-text').style.display = 'block';
-            document.getElementById('check-in').style.display = 'none';
-        }
-
-        function updateCheckOutDateText() {
-            const date = new Date(document.getElementById('check-out').value);
-            document.getElementById('check-out-text').value = date.toLocaleDateString('pt-BR');
-            document.getElementById('check-out-text').style.display = 'block';
-            document.getElementById('check-out').style.display = 'none';
-        }
-
-
-
-    </script>
-
 </body>
 
 </html>
